@@ -425,8 +425,7 @@ public class KeyMgrUtil {
      * @return the keys dir path
      */
     public String getKeysDirPath() {
-    	String domain = environment.getProperty(DOMAIN_URL, "localhost").replace("https://", "").replace("http://", "").replace("/", "");
-		return System.getProperty("java.io.tmpdir") + File.separator + "IDA-" + domain;
+        return new File("." + File.separator + "keys").getAbsolutePath();
     }
 
 	/**
